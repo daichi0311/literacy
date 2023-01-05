@@ -48,11 +48,14 @@ document.getElementById('out').innerHTML = result; // 検索結果を out の ID
    for(i = 0; i < 5; ++i){
     document.write('<TR><TD>' + i + '</TD><TD>'+zipdb[i]["zip"]+'</TD><TD>'+zipdb[i]["address"]+'</TD></TR>');
    }
+
    document.write('<TR><TD colspan="3">' + "・・・・・・" + '</TD></TR>');
+
    for(i = 0; i < 5; ++i){
       c++;
     document.write('<TR><TD>' + c + '</TD><TD>'+zipdb[c]["zip"]+'</TD><TD>'+zipdb[c]["address"]+'</TD></TR>');
    }
 </SCRIPT>
 </BODY>
+
 </HTML>
