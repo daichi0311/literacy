@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<META CHARSET="UTF-8">
+<TITLE>入力を受け取って出力する</TITLE>
+<SCRIPT>
+function query1(){
+ var input = prompt('食べ物の名前を入力してください', 'みかん');
+ var output = input + 'はおいしいですね';
+ document.getElementById('out').innerHTML = output;
+}
+function query2(){
+ var input = prompt('名前を入力してください', '名前');
+ var output = input + 'さん こんにちは';
+ document.getElementById('out').innerHTML = output;
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+ 学籍番号 氏名
+ <HR>
+ <TABLE border="1">
+ <TR> <TD onClick="query1()">例1</TD> <TD onClick="query2()">例2</TD> </TR>
+ <TR> <TD ID="out" colspan="2">出力はここに表示されます</TD> </TR>
+ </TABLE>
+</BODY>
+</HTML>
