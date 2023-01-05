@@ -20,81 +20,39 @@ document.getElementById('out').innerHTML = result; // 検索結果を out の ID
 function query2(){
  var input = prompt('郵便番号検索(完全一致)', '入力して下さい');
  var result = '見つかりませんでした'; // 検索結果を入れる変数
-
  var n = zipdb.length; // 検索対象の配列の大きさ
-
   for(i = 0; i < n; ++i){
-
     if( zipdb[i]["zip"]== input ){ // 入力がi番のデータと部分一致かどうか判定
-
       result = zipdb[i]["zip"] +" "+zipdb[i]["address"];
-
       break; // 最も内側の for ループから抜け出す
-
     }
-
   }
-
 document.getElementById('out').innerHTML = result; // 検索結果を out の ID を持つ要素に書く
-
 }
-
 </SCRIPT>
-
 </HEAD>
-
 <BODY>
-
  学籍番号 2242031 氏名 葛山大地
-
  <HR>
-
  <TABLE border="1">
-
  <TR> <TD onClick="query1()">住所検索(部分一致)</TD> <TD onClick="query2()">郵便番号検索(完全一致)</TD> </TR>
-
  <TR> <TD ID="out" colspan="2">検索結果はここに表示されます</TD> </TR>
-
  </TABLE>
-
  <HR>
-
  <SCRIPT>
-
    document.write('<TABLE BORDER="1">');
-
    var i = 0;
-
    var c = zipdb.length;
-
    c=c-5;
-
    document.write('<TR><TD>' + "#" + '</TD><TD>'+"郵便番号"+'</TD><TD>'+"住所"+'</TD></TR>');
-
    for(i = 0; i < 5; ++i){
-
     document.write('<TR><TD>' + i + '</TD><TD>'+zipdb[i]["zip"]+'</TD><TD>'+zipdb[i]["address"]+'</TD></TR>');
-
    }
-
-
-
    document.write('<TR><TD colspan="3">' + "・・・・・・" + '</TD></TR>');
-
-
-
    for(i = 0; i < 5; ++i){
-
       c++;
-
     document.write('<TR><TD>' + c + '</TD><TD>'+zipdb[c]["zip"]+'</TD><TD>'+zipdb[c]["address"]+'</TD></TR>');
-
    }
-
 </SCRIPT>
-
 </BODY>
-
-
-
 </HTML>
