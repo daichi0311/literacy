@@ -2,26 +2,32 @@
 <HTML>
 <HEAD>
 <META CHARSET="UTF-8">
-<TITLE>入力を受け取って出力する</TITLE>
+<TITLE>JavaScriptを用いて外部から取得したデータを表示</TITLE>
+<SCRIPT SRC="foods.js"></SCRIPT>
 <SCRIPT>
-function query1(){
- var input = prompt('郵便番号を入力してください', '2250024');
- var output = input + 'はおいしいですね';
- document.getElementById('out').innerHTML = output;
-}
-function query2(){
- var input = prompt('名前を入力してください', '名前');
- var output = input + 'さん こんにちは';
- document.getElementById('out').innerHTML = output;
+function set_table_data(){
+ var i;
+ var t = document.getElementById('food_list');
+ for(i = 1; i < t.rows.length; ++i){
+ t.rows[i].cells[0].innerHTML=i;
+ t.rows[i].cells[1].innerHTML=food[i];
+ t.rows[i].cells[2].innerHTML=text[i];
+ t.rows[i].cells[3].innerHTML=reco[i];
+ }
+ return 0;
 }
 </SCRIPT>
 </HEAD>
-<BODY>
- 学籍番号　2242031 氏名　葛山大地
- <HR>
- <TABLE border="1">
- <TR> <TD onClick="query1()">例1</TD> <TD onClick="query2()">例2</TD> </TR>
- <TR> <TD ID="out" colspan="2">出力はここに表示されます</TD> </TR>
- </TABLE>
+<BODY onLoad="set_table_data()">
+学籍番号 氏名<BR>
+<HR>
+<TABLE BORDER="1" ID="food_list">
+<TR><TH>番号</TH><TH>食べ物名</TH><TH>お勧めポイント</TH><TH>お勧め度</TH></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD></TD></TR>
+</TABLE>
 </BODY>
 </HTML>
