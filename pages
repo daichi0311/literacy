@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>津田沼の住民情報と統計</title>
+    <style>
+        /* ここに追加のスタイルを記述できます */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 0.5em;
+        }
+        main {
+            padding: 1em;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>津田沼の住民情報と統計</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#residents">住民情報</a></li>
+            <li><a href="#income">年収別世帯数</a></li>
+            <li><a href="#expenses">支出項目データ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="residents">
+            <h2>住民情報</h2>
+            <p>津田沼の住民は</p>
+        </section>
+
+        <section id="income">
+            <h2>年収別世帯数</h2>
+            <p>津田沼の住民の年収別の世帯数に関する統計データは...</p>
+        </section>
+
+        <section id="expenses">
+            <h2>支出項目データ</h2>
+            <p>津田沼の住民の支出項目に関するデータは...</p>
+        </section>
+        <!-- 他のセクションやコンテンツを追加できます -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 津田沼市統計局. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
